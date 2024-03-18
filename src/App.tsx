@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-   const [weight, setWeight] = useState<number>(0);
+   let weight: number = 0;
    const [weightText, setWeightText] = useState<string>("x มล.");
 
    const weightCal = () => {
@@ -12,7 +12,7 @@ function App() {
    };
 
    const onChangeWeight = (event: React.ChangeEvent<HTMLInputElement>) => {
-      setWeight(parseInt(event.target.value));
+      weight = parseInt(event.target.value);
       console.log(weight);
    };
 
